@@ -1,3 +1,5 @@
-name = input('Введите своё имя: ')
+PAGINATION = input('Ввердите число для диапазона: ')
+PAGINATION = int(PAGINATION.strip())
 
-print(name)
+for item in range(1, PAGINATION):
+    print(f'Число {item}')
