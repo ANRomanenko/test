@@ -9,7 +9,9 @@ from apikey import API_TOKEN
 #
 # r = requests.get(url, params=params)
 
-params = {"q": "Kiev", "appid": API_TOKEN, "units": "metric"}
+# params = {"q": "Kiev", "appid": API_TOKEN, "units": "metric"}
+data = {"custname": "name", "custtel": "pass", "custemail": "", "delivery": "", "comments": "",}
+
 headers = {
     "Accept": "application/json",
     "Accept-Encoding": "gzip, deflate, br",
@@ -26,9 +28,13 @@ headers = {
     "X-Amzn-Trace-Id": "Root=1-63ff2468-4d9902007c37936579de0e12"
   }
 
-url = "https://httpbin.org/headers"
+url = "https://httpbin.org/post"
+url_1 = "https://httpbin.org/forms/post"
 
-r = requests.get(url, headers=headers)
+variable = requests.Session()
+
+test = variable.get(url_1)
+r = variable.post(url, headers=headers, data=data)
 
 
 
@@ -37,6 +43,7 @@ r = requests.get(url, headers=headers)
 print(r.text)
 # print(r.json())
 # print(r.json())
+# print(r)
 
 # x = r.json()
 # print(x["weather"][0]["main"])
