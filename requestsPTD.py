@@ -34,7 +34,7 @@ url_1 = "https://httpbin.org/forms/post"
 variable = requests.Session()
 
 test = variable.get(url_1)
-r = variable.post(url, headers=headers, data=data)
+r = variable.post(url, headers=headers, data=data, allow_redirects=True)
 
 
 
