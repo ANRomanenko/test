@@ -1,1 +1,3 @@
 API_TOKEN = "da205693eed1b204f2655d4096bb777a"
+
+API_TOKEN_2 = "j6UppMHlQfPyNt1JTjI3Auef3mnCIvkMgBYcA6MsuaNVrvXt9wjiyTlA"
